@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
 // Write a comment describing the purpose of this route
 router.post("/", async (req, res) => {
   //there is a bug in the line below you need to fix
-  const { name, description } = req.body;
+  const { title, description } = req.body;
   const task = await taskModel.addTask(title, description);
   res.status(201).json(task);
 });
