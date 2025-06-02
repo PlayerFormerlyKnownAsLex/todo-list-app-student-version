@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-// The constant "taskModel" requires
+// The constant "taskModel" has a requirement to be within the "models" folder.
 const taskModel = require("../models/taskModel");
 
 //Write a comment describing the purpose of this route
@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
 
 // Write a comment describing the purpose of this route
 router.post("/", async (req, res) => {
-  //there is a bug in line 15 you need to fix
+  //there is a bug in the line below you need to fix
   const { name, description } = req.body;
   const task = await taskModel.addTask(title, description);
   res.status(201).json(task);
