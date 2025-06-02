@@ -10,9 +10,8 @@ router.get("/", async (req, res) => {
   res.json(tasks);
 });
 
-// Write a comment describing the purpose of this route
+// The line below posts the data that was received from the router.get function.
 router.post("/", async (req, res) => {
-  //there is a bug in the line below you need to fix
   const { title, description } = req.body;
   const task = await taskModel.addTask(title, description);
   res.status(201).json(task);
