@@ -24,3 +24,10 @@ li {
   background: #eee;
   border-radius: 4px;
 }
+
+.submit {
+  color: #ba6fbd;
+  cursor: pointer;
+  padding: 16px 32px;
+  font-size: 16px;
+}
